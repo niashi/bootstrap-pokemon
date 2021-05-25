@@ -41,10 +41,10 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-dark " href="#">Vídeos<span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link text-dark " href="#videos">Vídeos<span class="sr-only">(página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Etimologia</a>
+                    <a class="nav-link text-dark" href="#etimologia">Etimologia</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -58,7 +58,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled text-dark" href="#">Entre em Contato</a>
+                    <a class="nav-link disabled text-dark" href="#contato">Entre em Contato</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -100,19 +100,20 @@
     </div>
     <!-- Carrossel -->
 
-
-    <!-- Grid -->
+    <!-- Container dos vídeos -->
     <div class="container">
-        <div class="container mt-4">
+        <!-- Linha de texto -->
+        <div class="container mt-5">
             <div class="row">
-                <h2>
+                <h2 id="videos">
                     <img src="./assets/img/pokeball.png" alt="Ícone de Pokébola" class="tm-icone mr-2"></img>Vídeos
                 </h2>
             </div>
         </div>
+        <!-- /Linha de texto -->
         
         <!-- Linha de vídeos -->
-        <div class="row mt-5 mb-5">
+        <div class="row mt-5">
             <!-- Vídeo 1 -->
             <div class="col-md-6">
                 <div><iframe class="shadow-lg p-3 mb-5 rounded" width="560" height="315" src="https://www.youtube.com/embed/j5KvubvurDA" title="YouTube video player"
@@ -132,99 +133,120 @@
         </div>
         <!-- /Linha de vídeos -->
     </div>
-    <!-- /Grid -->
+    <!-- /Container dos vídeos-->
 
-<!-- Conjunto de cards -->
-<div class="card-deck container">
-    <!-- Card 1 -->
-    <div class="card shadow-lg p-3 mb-5 rounded">
-        <img class="card-img-top" width="150" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png" alt="Imagem de Beedrill">
-        <div class="card-body">
-            <h5 class="card-title">Beedrill</h5>
-            <p class="card-text">[bee + drill] > abelha broca, numa relação às patas pontudas e afiadas do pokémon.</p>
+    <!-- Container de cards -->
+    <div class="card-deck container m-0">
+        <!-- Linha de texto -->
+        <div class="container mb-5">
+            <div class="row">
+                <h2 id="etimologia">
+                    <img src="./assets/img/pokeball.png" alt="Ícone de Pokébola" class="tm-icone mr-2"></img>Etimologia
+                </h2>
+            </div>
         </div>
+        <!-- /Linha de texto -->
+
+        <!-- Card 1 -->
+        <div class="card shadow-lg p-3 mb-5 rounded">
+            <img class="card-img-top" width="150" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png" alt="Imagem de Beedrill">
+            <div class="card-body">
+                <h5 class="card-title">Beedrill</h5>
+                <p class="card-text">[bee + drill] > abelha broca, numa relação às patas pontudas e afiadas do pokémon.</p>
+            </div>
+        </div>
+        <!-- /Card 1 -->
+
+        <!-- Card 2 -->
+        <div class="card shadow-lg p-3 mb-5 rounded">
+            <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="Imagem de Bulbasaur">
+            <div class="card-body">
+                <h5 class="card-title">Bulbasaur</h5>
+                <p class="card-text">[bulb + saur] > dinossauro com bulbo, em relação ao elemento das costas do pokémon.</p>
+            </div>
+        </div>
+        <!-- /Card 2 -->
+
+        <!-- Card 3 -->
+        <div class="card shadow-lg p-3 mb-5 rounded">
+            <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png" alt="Imagem de Gloom">
+            <div class="card-body">
+                <h5 class="card-title">Gloom</h5>
+                <p class="card-text">A união entre gloom (depressão) e bloom (florescimento), numa relação ao aspecto depressivo
+                deste pokémon planta.</p>
+            </div>
+        </div>
+        <!-- /Card 3 -->
     </div>
-    <!-- /Card 1 -->
+    <!-- /Container de cards -->
 
-    <!-- Card 2 -->
-    <div class="card shadow-lg p-3 mb-5 rounded">
-        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="Imagem de Bulbasaur">
-        <div class="card-body">
-            <h5 class="card-title">Bulbasaur</h5>
-            <p class="card-text">[bulb + saur] > dinossauro com bulbo, em relação ao elemento das costas do pokémon.</p>
+    <!-- Container do formulário -->
+    <div class="container">
+        <!-- Linha de texto -->
+        <div class="container mb-5">
+            <div class="row">
+                <h2 id="contato">
+                    <img src="./assets/img/pokeball.png" alt="Ícone de Pokébola" class="tm-icone mr-2"></img>Entre em contato
+                </h2>
+            </div>
         </div>
+        <!-- /Linha de texto -->
+
+        <!-- Formulário -->
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+            </div>
+            <div class="form-group">
+                <label for="assunto">Mensagem</label>
+                <textarea class="form-control" id="assunto" rows="3" name="assunto" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
+            </div>
+            <div>
+                <button onclick="enviar()">Enviar</button>
+            </div>
+        </form>
+        <!-- /Formulário -->
     </div>
-    <!-- /Card 2 -->
+    <!-- /Container do formulário -->
 
-    <!-- Card 3 -->
-    <div class="card shadow-lg p-3 mb-5 rounded">
-        <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png" alt="Imagem de Gloom">
-        <div class="card-body">
-            <h5 class="card-title">Gloom</h5>
-            <p class="card-text">A união entre gloom (depressão) e bloom (florescimento), numa relação ao aspecto depressivo
-            deste pokémon planta.</p>
-        </div>
-    </div>
-    <!-- /Card 3 -->
-</div>
-<!-- /Conjunto de cards -->
+    <!--Rodapé-->
+    <hr class="mt-5">
+    <footer>
 
-<!-- Formulário -->
-<div class="container mb-5">
-    <h1 class="mb-5">Entre em contato:</h1>
-    <form>
-        <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" onkeyup="validaNome()">
-            <div id="txtNome"></div>
+        <!-- Linha 1 -->
+        <div class="row">
+            <!-- Primeira coluna da Linha 1 -->
+            <div class="col-md-12 d-flex justify-content-center">
+                <a href="https://github.com/Niashi" target="_blank" class="p-2">
+                    <img class="tm-social" src="assets/img/github.png" alt="Logo do GitHub">
+                </a>
+            </div>
+            <!-- /Primeira coluna da Linha 1 -->
         </div>
-        <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="text" class="form-control" id="email" onkeyup="validaEmail()">
-            <div id="txtEmail"></div>
-        </div>
-        <div class="form-group">
-            <label for="assunto">Mensagem</label>
-            <textarea class="form-control" id="assunto" rows="3" name="assunto" onkeyup="validaAssunto()"></textarea>
-            <div id="txtAssunto"></div>
-        </div>
-        <div>
-            <button onclick="enviar()">Enviar</button>
-        </div>
-    </form>
-</div>
-<!-- /Formulário -->
+        <!-- /Linha 1 -->
 
-<!--Rodapé-->
-<hr>
-<footer>
-
-    <!-- Linha 1 -->
-    <div class="row">
-        <!-- Primeira coluna da Linha 1 -->
-        <div class="col-md-12 d-flex justify-content-center">
-            <a href="https://github.com/Niashi" target="_blank" class="p-2">
-                <img class="tm-social" src="assets/img/github.png" alt="Logo do GitHub">
-            </a>
+        <!-- Linha 2 -->
+        <div class="row">
+            <!-- Primeira coluna da Linha 2 -->
+            <div class="col-md-12">
+                <p class="text-center">
+                    Todos os direitos reservados: <b>Mathias Niashi &copy</b>
+                </p>
+            </div>
+            <!-- /Primeira coluna da Linha 2 -->
         </div>
-        <!-- /Primeira coluna da Linha 1 -->
-    </div>
-    <!-- /Linha 1 -->
+        <!-- /Linha 2 -->
 
-    <!-- Linha 2 -->
-    <div class="row">
-        <!-- Primeira coluna da Linha 2 -->
-        <div class="col-md-12">
-            <p class="text-center">
-                Todos os direitos reservados: <b>Mathias Niashi &copy</b>
-            </p>
-        </div>
-        <!-- /Primeira coluna da Linha 2 -->
-    </div>
-    <!-- /Linha 2 -->
-
-</footer>
-<!--/Rodapé-->
+    </footer>
+    <!--/Rodapé-->
 
     <script src="js/script.js"></script>
 
